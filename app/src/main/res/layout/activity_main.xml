@@ -7,22 +7,13 @@
     android:layout_marginHorizontal="30sp"
     tools:context=".MainActivity">
 
-
-    <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
             <!--Block-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
+                android:id="@+id/block1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_gravity="center"
                 android:layout_marginVertical="10sp"
                 android:layout_height="wrap_content">
@@ -31,10 +22,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:id="@+id/item1"
                     android:contentDescription="@string/redblock"
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/redblock"
+                    android:src="@drawable/ic_white_block"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,6 +68,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/block2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/block1"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginVertical="10sp"
                 android:layout_height="wrap_content">
 
@@ -77,6 +83,17 @@
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/redblock"
+                    android:src="@drawable/ic_white_block"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,6 +125,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/block3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/block2"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginVertical="10sp"
                 android:layout_height="wrap_content">
 
@@ -118,6 +139,17 @@
                     android:contentDescription="@string/redblock"
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/redblock"
+                    android:src="@drawable/ic_white_block"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,6 +181,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/block4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/block3"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginVertical="10sp"
                 android:layout_height="wrap_content">
 
@@ -159,6 +195,17 @@
                     android:contentDescription="@string/redblock"
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/redblock"
+                    android:src="@drawable/ic_white_block"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -190,6 +237,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/block5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/block4"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginVertical="10sp"
                 android:layout_height="wrap_content">
 
@@ -200,6 +251,17 @@
                     android:contentDescription="@string/redblock"
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/redblock"
+                    android:src="@drawable/ic_white_block"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -231,6 +293,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
+                android:id="@+id/block6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/block5"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginVertical="10sp"
                 android:layout_height="wrap_content">
 
@@ -242,6 +308,17 @@
                     android:contentDescription="@string/redblock"
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="78dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:contentDescription="@string/redblock"
+                    android:src="@drawable/ic_white_block"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -268,6 +345,4 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView7" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
