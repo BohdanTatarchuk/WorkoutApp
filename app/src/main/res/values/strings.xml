@@ -3,6 +3,8 @@
 
     <!--IMG description-->
     <string name="redblock">RedBlock</string>
+    <string name="play_button">play button</string>
+    <string name="stop_button">stop button</string>
 
     <!--exercises-->
     <string name="exercise_1">Exercise 1</string>
@@ -11,12 +13,16 @@
     <string name="exercise_4">Exercise 4</string>
     <string name="exercise_5">Exercise 5</string>
     <string name="exercise_6">Exercise 6</string>
-    <string name="exercise_7">Exercise 7</string>
-    <string name="exercise_8">Exercise 8</string>
-    <string name="exercise_9">Exercise 9</string>
-    <string name="exercise_10">Exercise 10</string>
-    <string name="exercise_11">Exercise 11</string>
 
     <!--exercises names-->
-    <string name="upper_abs">Upper ABS</string>
+    <string name="upper">Crunches</string>
+    <string name="lower">Leg raises</string>
+    <string name="six_pack">Flutter kicks</string>
+    <string name="plank">Elbow plank</string>
+    <string name="plank_c">Plank crunches</string>
+    <string name="obliques">Toe taps</string>
+
+    <!--Other staff-->
+    <string name="time">1:00</string>
+
 </resources>
