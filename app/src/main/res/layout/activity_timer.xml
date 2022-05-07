@@ -7,7 +7,7 @@
     tools:context=".Timer">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="166dp"
@@ -26,17 +26,19 @@
         android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/ic_play_button"
-        android:contentDescription="@string/play_button" />
+        android:layout_marginStart="120dp"
+        android:contentDescription="@string/play_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:srcCompat="@drawable/ic_play_button" />
 
     <ImageView
         android:id="@+id/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/ic_stop_button"
-        android:contentDescription="@string/stop_button" />
+        android:layout_marginEnd="120dp"
+        android:contentDescription="@string/stop_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        app:srcCompat="@drawable/ic_stop_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
