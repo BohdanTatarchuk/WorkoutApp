@@ -23,6 +23,6 @@
     <string name="obliques">Toe taps</string>
 
     <!--Other staff-->
-    <string name="time">60</string>
+    <string name="time">01:00</string>
 
 </resources>
