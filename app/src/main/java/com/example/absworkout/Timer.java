@@ -1,14 +1,14 @@
 package com.example.absworkout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.dynamicanimation.animation.DynamicAnimation;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.dynamicanimation.animation.SpringForce;
 
-import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,7 +21,9 @@ public class Timer extends AppCompatActivity {
     TextView time;
     ImageView play, stop, pause;
 
-    Animation anim = null;
+    SpringForce force;
+    SpringAnimation anim;
+
     private MediaPlayer finish;
 
     CountDownTimer timer;
@@ -40,36 +42,34 @@ public class Timer extends AppCompatActivity {
 
         finish = MediaPlayer.create(this, R.raw.sound);
 
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                    startTimer();
-                    play.setVisibility(View.INVISIBLE);
-                    pause.setVisibility(View.VISIBLE);
-                    stop.setVisibility(View.VISIBLE);
-            }
+        //BUTTONS
+        play.setOnClickListener(view -> {
+                startTimer();
+                play.setVisibility(View.INVISIBLE);
+                pause.setVisibility(View.VISIBLE);
+                stop.setVisibility(View.VISIBLE);
+                animX(stop, 200f);
+                animX(pause, -200f);
+                animX(play, -200f);
         });
 
-        stop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               resetTimer();
-               pause.setVisibility(View.INVISIBLE);
-               play.setVisibility(View.VISIBLE);
-               stop.setVisibility(View.INVISIBLE);
-            }
+        stop.setOnClickListener(view -> {
+           resetTimer();
+           animX(play, 0f);
+           pause.setVisibility(View.INVISIBLE);
+           play.setVisibility(View.VISIBLE);
+           stop.setVisibility(View.INVISIBLE);
+
         });
 
-        pause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pauseTimer();
-                play.setVisibility(View.VISIBLE);
-                pause.setVisibility(View.INVISIBLE);
-            }
+        pause.setOnClickListener(view -> {
+            pauseTimer();
+            play.setVisibility(View.VISIBLE);
+            pause.setVisibility(View.INVISIBLE);
         });
     }
 
+    //TIMER
     private void startTimer(){
         timer = new CountDownTimer(timeLeft, 1000) {
             @Override
@@ -91,6 +91,9 @@ public class Timer extends AppCompatActivity {
         timerRunning = true;
     }
 
+
+
+    //TIMER FUNCTIONS
     private void pauseTimer(){
         timer.cancel();
         timerRunning = false;
@@ -110,7 +113,31 @@ public class Timer extends AppCompatActivity {
         time.setText(format);
     }
 
+
+
+    //SOUND
     public void sound(MediaPlayer sfx){
         sfx.start();
+    }
+
+
+
+    //ANIMATIONS
+    public void animOp(View view, float alpha){
+        anim = new SpringAnimation(view, DynamicAnimation.ALPHA);
+        force = new SpringForce();
+        force.setFinalPosition(alpha);
+        anim.setSpring(force);
+        anim.start();
+    }
+
+    public void animX(View view, float position){
+        anim = new SpringAnimation(view, DynamicAnimation.TRANSLATION_X);
+        force = new SpringForce();
+        force.setStiffness(SpringForce.STIFFNESS_LOW);
+        force.setFinalPosition(position);
+        force.setDampingRatio(SpringForce.DAMPING_RATIO_LOW_BOUNCY);
+        anim.setSpring(force);
+        anim.start();
     }
 }
