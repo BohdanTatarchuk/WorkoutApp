@@ -3,6 +3,7 @@ package com.example.absworkout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -21,6 +22,7 @@ public class Timer extends AppCompatActivity {
     ImageView play, stop, pause;
 
     Animation anim = null;
+    private MediaPlayer finish;
 
     CountDownTimer timer;
     boolean timerRunning;
@@ -35,6 +37,8 @@ public class Timer extends AppCompatActivity {
         play = findViewById(R.id.play);
         stop = findViewById(R.id.stop);
         pause = findViewById(R.id.pause);
+
+        finish = MediaPlayer.create(this, R.raw.sound);
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +84,7 @@ public class Timer extends AppCompatActivity {
                 play.setVisibility(View.VISIBLE);
                 pause.setVisibility(View.INVISIBLE);
                 stop.setVisibility(View.INVISIBLE);
+                sound(finish);
             }
         }.start();
 
@@ -103,5 +108,9 @@ public class Timer extends AppCompatActivity {
 
         String format = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
         time.setText(format);
+    }
+
+    public void sound(MediaPlayer sfx){
+        sfx.start();
     }
 }

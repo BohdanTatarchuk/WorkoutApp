@@ -4,18 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="30sp"
     tools:context=".MainActivity">
 
-            <!--Block-->
-            <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/text"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Block-->
+    <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:id="@+id/block1"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_gravity="center"
-                android:layout_marginVertical="10sp"
+                android:layout_marginVertical="20sp"
                 android:layout_height="wrap_content">
 
                 <ImageView
@@ -26,17 +38,6 @@
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="78dp"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="7dp"
-                    android:contentDescription="@string/redblock"
-                    android:src="@drawable/ic_white_block"
-                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,17 +87,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="78dp"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="7dp"
-                    android:contentDescription="@string/redblock"
-                    android:src="@drawable/ic_white_block"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
@@ -139,17 +129,6 @@
                     android:contentDescription="@string/redblock"
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="78dp"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="7dp"
-                    android:contentDescription="@string/redblock"
-                    android:src="@drawable/ic_white_block"
-                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -198,17 +177,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="78dp"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="7dp"
-                    android:contentDescription="@string/redblock"
-                    android:src="@drawable/ic_white_block"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
@@ -251,17 +219,6 @@
                     android:contentDescription="@string/redblock"
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="78dp"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="7dp"
-                    android:contentDescription="@string/redblock"
-                    android:src="@drawable/ic_white_block"
-                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -308,17 +265,6 @@
                     android:contentDescription="@string/redblock"
                     android:src="@drawable/ic_training"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="78dp"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="7dp"
-                    android:contentDescription="@string/redblock"
-                    android:src="@drawable/ic_white_block"
-                    app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

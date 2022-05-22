@@ -40,7 +40,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/stop_button"
         android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time"
         app:srcCompat="@drawable/ic_stop_button"
         tools:visibility="visible" />
@@ -51,7 +52,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/stop_button"
         android:visibility="invisible"
-        app:layout_constraintRight_toLeftOf="@id/play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time"
         app:srcCompat="@drawable/ic_pause_button"
         tools:visibility="visible" />
