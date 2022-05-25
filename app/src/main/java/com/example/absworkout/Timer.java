@@ -56,6 +56,8 @@ public class Timer extends AppCompatActivity {
         stop.setOnClickListener(view -> {
            resetTimer();
            animX(play, 0f);
+           animX(stop, 0f);
+           animX(pause, 0f);
            pause.setVisibility(View.INVISIBLE);
            play.setVisibility(View.VISIBLE);
            stop.setVisibility(View.INVISIBLE);
@@ -116,22 +118,14 @@ public class Timer extends AppCompatActivity {
 
 
     //SOUND
-    public void sound(MediaPlayer sfx){
+    private void sound(MediaPlayer sfx){
         sfx.start();
     }
 
 
 
-    //ANIMATIONS
-    public void animOp(View view, float alpha){
-        anim = new SpringAnimation(view, DynamicAnimation.ALPHA);
-        force = new SpringForce();
-        force.setFinalPosition(alpha);
-        anim.setSpring(force);
-        anim.start();
-    }
-
-    public void animX(View view, float position){
+    //ANIMATION
+    private void animX(View view, float position){
         anim = new SpringAnimation(view, DynamicAnimation.TRANSLATION_X);
         force = new SpringForce();
         force.setStiffness(SpringForce.STIFFNESS_LOW);

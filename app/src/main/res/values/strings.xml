@@ -2,6 +2,7 @@
     <string name="app_name">ABS Workout</string>
 
     <!--IMG description-->
+    <string name="block">Block</string>
     <string name="redblock">RedBlock</string>
     <string name="play_button">play button</string>
     <string name="stop_button">stop button</string>
